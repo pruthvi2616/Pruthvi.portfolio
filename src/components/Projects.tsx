@@ -194,7 +194,7 @@ const Projects = () => {
       id: 6,
       title: "Chess Game (2D)",
       description: "2D chess game with full move logic.",
-      thumbnail: "chess.png",
+      thumbnail: "chess2.png",
       videoUrl:
         "https://drive.google.com/file/d/1oYqKmRAxEZ4XEeMtUNcj17nu4erCb3Vp/preview",
       fullDescription: "Unity-based chess game with turn validation.",

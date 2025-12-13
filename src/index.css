@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* VR Theme - Deep Space Purple Base */
+    --background: 280 100% 8%;
+    --foreground: 0 0% 96%;
+
+    /* Cards with glassmorphism */
+    --card: 280 40% 12%;
+    --card-foreground: 0 0% 96%;
+
+    --popover: 280 40% 10%;
+    --popover-foreground: 0 0% 96%;
+
+    /* Neon Cyan Primary */
+    --primary: 186 100% 50%;
+    --primary-foreground: 280 100% 8%;
+
+    /* Electric Blue Secondary */
+    --secondary: 211 100% 50%;
+    --secondary-foreground: 0 0% 96%;
+
+    /* Muted Purple Tones */
+    --muted: 280 30% 18%;
+    --muted-foreground: 0 0% 70%;
+
+    /* Pink/Purple Accent */
+    --accent: 300 100% 60%;
+    --accent-foreground: 0 0% 96%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 96%;
+
+    /* Neon borders */
+    --border: 280 40% 25%;
+    --input: 280 40% 18%;
+    --ring: 186 100% 50%;
+
+    --radius: 1rem;
+
+    /* Custom VR Theme Colors */
+    --space-purple: 280 100% 8%;
+    --neon-cyan: 186 100% 50%;
+    --electric-blue: 211 100% 50%;
+    --neon-pink: 330 100% 65%;
+    --glass-bg: 280 40% 12%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(280 100% 20%), hsl(211 100% 30%));
+    --gradient-neon: linear-gradient(90deg, hsl(186 100% 50%), hsl(211 100% 50%));
+    --gradient-accent: linear-gradient(135deg, hsl(300 100% 60%), hsl(330 100% 65%));
+    
+    /* Shadows & Glows */
+    --glow-cyan: 0 0 20px hsl(186 100% 50% / 0.5), 0 0 40px hsl(186 100% 50% / 0.3);
+    --glow-blue: 0 0 20px hsl(211 100% 50% / 0.5), 0 0 40px hsl(211 100% 50% / 0.3);
+    --glow-pink: 0 0 20px hsl(330 100% 65% / 0.5), 0 0 40px hsl(330 100% 65% / 0.3);
+    --shadow-card: 0 8px 32px hsl(280 100% 0% / 0.4);
+    
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased overflow-x-hidden;
+    background: linear-gradient(135deg, hsl(280 100% 8%) 0%, hsl(280 80% 12%) 50%, hsl(280 100% 8%) 100%);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* Glassmorphism effect */
+  .glass {
+    background: rgba(26, 0, 43, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 245, 255, 0.2);
+  }
+
+  .glass-card {
+    background: linear-gradient(135deg, rgba(26, 0, 43, 0.6), rgba(26, 0, 43, 0.3));
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(0, 245, 255, 0.15);
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Neon glow effects */
+  .glow-cyan {
+    box-shadow: var(--glow-cyan);
+  }
+
+  .glow-blue {
+    box-shadow: var(--glow-blue);
+  }
+
+  .glow-pink {
+    box-shadow: var(--glow-pink);
+  }
+
+  .text-glow-cyan {
+    text-shadow: 0 0 10px hsl(186 100% 50% / 0.7), 0 0 20px hsl(186 100% 50% / 0.5);
+  }
+
+  .text-glow-blue {
+    text-shadow: 0 0 10px hsl(211 100% 50% / 0.7), 0 0 20px hsl(211 100% 50% / 0.5);
+  }
+
+  /* Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes grid-pulse {
+    0%, 100% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
+
+  .hover-glow-cyan:hover {
+    box-shadow: var(--glow-cyan);
+  }
+
+  .hover-glow-blue:hover {
+    box-shadow: var(--glow-blue);
+  }
+
+  /* Grid background effect */
+  .vr-grid {
+    background-image: 
+      linear-gradient(rgba(0, 245, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 245, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: grid-pulse 20s ease-in-out infinite;
+  }
+}

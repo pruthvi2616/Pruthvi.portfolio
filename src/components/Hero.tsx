@@ -1,6 +1,6 @@
 import { Download, Mail, Gamepad2, Box, ScanLine } from "lucide-react";
 import { Button } from "./ui/button";
-import heroImage from "@/assets/hero.jpg";
+import heroImage from "@/assets/pruthvihero.jpg";
 import resumeFile from "@/assets/Pruthvi_Resume.pdf";
 
 const Hero = () => {

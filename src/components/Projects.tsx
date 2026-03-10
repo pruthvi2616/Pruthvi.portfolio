@@ -38,7 +38,7 @@ const Projects = () => {
           name: "Unreal Engine 5",
           icon: (
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/1/13/Unreal_Engine_Logo.svg"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unrealengine/unrealengine-original.svg"
               className="w-4 h-4"
               alt="UE5"
             />

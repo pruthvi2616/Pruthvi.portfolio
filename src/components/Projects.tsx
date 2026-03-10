@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Play, ExternalLink } from "lucide-react";
+import { Play, ExternalLink, Sun, Box  } from "lucide-react";
 import { Button } from "./ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "./ui/dialog";
 

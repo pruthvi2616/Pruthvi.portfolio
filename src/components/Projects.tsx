@@ -25,6 +25,35 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const projects: Project[] = [
+     {
+      id: 0, 
+      title: "Star Wars: The Arrival (UE5 Cinematic)",
+      description: "High-fidelity 3D cinematic animation built in Unreal Engine 5.",
+      thumbnail: "starwars.png", 
+      videoUrl: "https://drive.google.com/file/d/1zQrOxUcQjvAAQR1ivdB-SXKMTVSCEiCu/view?usp=sharing",
+      fullDescription:
+        "A cinematic sequence created in Unreal Engine 5 featuring Stormtroopers and a custom-modeled environment. I designed the entire scene, modeled the hangar environment, and utilized UE5's Lumen for high-end real-time global illumination. The animation showcases character reactions and technical lighting during a spaceship arrival.",
+      techUsed: [
+        {
+          name: "Unreal Engine 5",
+          icon: (
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/1/13/Unreal_Engine_Logo.svg"
+              className="w-4 h-4"
+              alt="UE5"
+            />
+          ),
+        },
+        {
+          name: "Lumen",
+          icon: <Sun className="w-4 h-4 text-yellow-400" />,
+        },
+        {
+          name: "3D Modeling",
+          icon: <Box className="w-4 h-4 text-blue-400" />,
+        },
+      ],
+    },
     {
       id: 1,
       title: "VR CNC Lathe Machine Training Simulator",

@@ -172,7 +172,7 @@ const Projects = () => {
           name: "Photon",
           icon: (
             <img
-              src="https://avatars.githubusercontent.com/u/767351?s=200&v=4"
+              src="https://icon.icepanel.io/Technology/svg/Photon-Engine-.svg"
               className="w-4 h-4"
             />
           ),

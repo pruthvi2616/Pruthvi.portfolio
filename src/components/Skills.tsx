@@ -144,7 +144,7 @@ const Skills = () => {
                 }
               />
               <SkillButton
-                name="Unreal Engine (Learning)"
+                name="Unreal Engine"
                 icon={
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unrealengine/unrealengine-original.svg"

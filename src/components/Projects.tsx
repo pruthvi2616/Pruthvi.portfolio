@@ -30,7 +30,7 @@ const Projects = () => {
       title: "Star Wars: The Arrival (UE5 Cinematic)",
       description: "High-fidelity 3D cinematic animation built in Unreal Engine 5.",
       thumbnail: "starwars.png", 
-      videoUrl: "https://drive.google.com/file/d/1zQrOxUcQjvAAQR1ivdB-SXKMTVSCEiCu/view?usp=sharing",
+      videoUrl: "https://drive.google.com/file/d/1zQrOxUcQjvAAQR1ivdB-SXKMTVSCEiCu/view",
       fullDescription:
         "A cinematic sequence created in Unreal Engine 5 featuring Stormtroopers and a custom-modeled environment. I designed the entire scene, modeled the hangar environment, and utilized UE5's Lumen for high-end real-time global illumination. The animation showcases character reactions and technical lighting during a spaceship arrival.",
       techUsed: [
